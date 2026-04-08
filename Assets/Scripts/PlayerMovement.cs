@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsPlayerOnGround()
     {
-        return Physics.CheckSphere(groundCheck.position, 0.5f, groundLayer);
+        return Physics.CheckSphere(groundCheck.position, 0.6f, groundLayer);
     }
 
     private void MovePlayer()
