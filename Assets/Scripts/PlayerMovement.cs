@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         MyInput();
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsPlayerOnGround())
+        if (Input.GetButtonDown("Jump") && IsPlayerOnGround())
         {
             Jump();
         }
