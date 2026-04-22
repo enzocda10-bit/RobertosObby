@@ -14,6 +14,8 @@ public class Item : MonoBehaviour
 
     private void CollectItem()
     {
+        TimerManager.Instance.AddTime();
+        TimerManager.Instance.AddCoins();
         Destroy(gameObject);
     }
 }
