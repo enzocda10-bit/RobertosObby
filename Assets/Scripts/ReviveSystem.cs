@@ -5,6 +5,7 @@ using UnityEngine;
 public class ReviveSystem : MonoBehaviour
 {
     public Vector3 spawnPosition;
+    public GameObject timeManager;
 
     // Start is called before the first frame update
     void Start()
@@ -16,5 +17,6 @@ public class ReviveSystem : MonoBehaviour
     public void RevivePlayer()
     {
         transform.position = spawnPosition;
+        timeManager.GetComponent<TimerManager>().AddTime();
     }
 }
