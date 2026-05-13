@@ -9,6 +9,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out ReviveSystem reviveSystem))
         {
+            AudioManager.Instance.PlaySound(AudioManager.Instance.checkPointSound);
             reviveSystem.spawnPosition = checkpoint.position;
         }
     }

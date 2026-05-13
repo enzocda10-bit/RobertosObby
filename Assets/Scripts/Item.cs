@@ -16,6 +16,7 @@ public class Item : MonoBehaviour
     {
         TimerManager.Instance.AddTime();
         TimerManager.Instance.AddCoins();
+        AudioManager.Instance.PlaySound(AudioManager.Instance.collectItem);
         Destroy(gameObject);
     }
 }
