@@ -12684,10 +12684,10 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
-  cullingMode: 0
+  cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  emitterVelocityMode: 1
+  emitterVelocityMode: 0
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -12809,7 +12809,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 0
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -13244,7 +13244,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 10
+    maxNumParticles: 2
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -13305,7 +13305,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 11
+    angle: 11.72
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -13391,7 +13391,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.0001
+      value: 0.19
       mode: 0
       spread: 0
       speed:
@@ -13510,7 +13510,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -13621,7 +13621,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.8
-      minScalar: 0.4
+      minScalar: 0.8
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -22145,6 +22145,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6120716515208979189, guid: 8ca0c25be2f00574bafaba4fcc570f7b,
     type: 3}
   m_PrefabInstance: {fileID: 593146743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &596649736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5812073926513041594, guid: f5b70c849f6b198478f0e27a94a5520d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1273646691}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &597289545
 PrefabInstance:
@@ -31888,6 +31894,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7798365472023144051, guid: e77bf23c27ab3f24ba66f1e74dda0f62,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39453,12 +39464,12 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1482289114}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5812073926513041594, guid: f5b70c849f6b198478f0e27a94a5520d,
         type: 3}
       propertyPath: m_Name
-      value: flag
+      value: EndFlag
       objectReference: {fileID: 0}
     - target: {fileID: 6621262174380554752, guid: f5b70c849f6b198478f0e27a94a5520d,
         type: 3}
@@ -39483,7 +39494,7 @@ PrefabInstance:
     - target: {fileID: 6621262174380554752, guid: f5b70c849f6b198478f0e27a94a5520d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6621262174380554752, guid: f5b70c849f6b198478f0e27a94a5520d,
         type: 3}
@@ -39498,7 +39509,7 @@ PrefabInstance:
     - target: {fileID: 6621262174380554752, guid: f5b70c849f6b198478f0e27a94a5520d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6621262174380554752, guid: f5b70c849f6b198478f0e27a94a5520d,
         type: 3}
@@ -39508,7 +39519,7 @@ PrefabInstance:
     - target: {fileID: 6621262174380554752, guid: f5b70c849f6b198478f0e27a94a5520d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6621262174380554752, guid: f5b70c849f6b198478f0e27a94a5520d,
         type: 3}
@@ -39528,14 +39539,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5812073926513041594, guid: f5b70c849f6b198478f0e27a94a5520d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1273646693}
   m_SourcePrefab: {fileID: 100100000, guid: f5b70c849f6b198478f0e27a94a5520d, type: 3}
---- !u!4 &1273646692 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6621262174380554752, guid: f5b70c849f6b198478f0e27a94a5520d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1273646691}
+--- !u!114 &1273646693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596649736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2b53ca6af66cf145a35a0dcbe1abb94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winScene: Win
 --- !u!1001 &1276310083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42377,7 +42399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22049d0c00a1d834d873aa3af693f172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToPassLevel: 10
+  timeToPassLevel: 20
   timerPerItem: 12
   timeText: {fileID: 1528835203}
   coinsText: {fileID: 48662402}
@@ -45773,7 +45795,6 @@ Transform:
   - {fileID: 1333380756}
   - {fileID: 190977423}
   - {fileID: 243115318}
-  - {fileID: 1273646692}
   m_Father: {fileID: 599622523}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1482289115
@@ -64711,6 +64732,7 @@ SceneRoots:
   - {fileID: 1857815723}
   - {fileID: 453095701}
   - {fileID: 1361212555}
+  - {fileID: 1273646691}
   - {fileID: 647667261}
   - {fileID: 545014636}
   - {fileID: 1523367141}

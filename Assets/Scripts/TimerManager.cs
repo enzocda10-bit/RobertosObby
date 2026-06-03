@@ -30,7 +30,9 @@ public class TimerManager : MonoBehaviour
         if (currentTime <= 0)
         {
             currentTime = 0;
-            SceneManager.LoadScene("LoseScene");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            SceneManager.LoadScene("Lose");
         }
 
         UpdateTimerText();
